@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <title>Coloring Book</title>
+</head>
+<body class="bg-gray-100">
+  <header class="bg-blue-500 text-white p-4">
+    <h1 class="text-2xl">Web-based Coloring Book</h1>
+  </header>
+  <div class="flex">
+    <aside class="bg-white p-4 w-1/4">
+      <!-- Color palette, tools, and drawing list go here -->
+        <!-- Add this inside the <aside> element -->
+          <div class="mb-4">
+            <button id="clearCanvas" class="bg-red-500 text-white px-4 py-2 rounded">Clear Canvas</button>
+          </div>
+
+          <div class="grid grid-cols-5 gap-2">
+            <div class="color-option bg-black w-8 h-8 rounded cursor-pointer" data-color="black"></div>
+            <div class="color-option bg-red-500 w-8 h-8 rounded cursor-pointer" data-color="red"></div>
+            <div class="color-option bg-yellow-500 w-8 h-8 rounded cursor-pointer" data-color="yellow"></div>
+            <div class="color-option bg-green-500 w-8 h-8 rounded cursor-pointer" data-color="green"></div>
+            <div class="color-option bg-blue-500 w-8 h-8 rounded cursor-pointer" data-color="blue"></div>
+            <!-- Add more colors as needed -->
+          </div>
+
+    </aside>
+    <main class="bg-white p-4 flex-grow">
+      <!-- Drawing canvas goes here -->
+      <!-- Add this inside the <main> element -->
+        <canvas id="drawingCanvas" class="border border-gray-300"></canvas>
+
+    </main>
+  </div>
+  <script src="scripts.js"></script>
+</body>
+</html>
